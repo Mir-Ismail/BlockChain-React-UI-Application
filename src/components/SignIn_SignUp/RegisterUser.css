@@ -1,0 +1,54 @@
+/* RegisterUser.css */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+h2 {
+    color: #343a40;
+    font-weight: bold;
+}
+
+h3 {
+    color: #495057;
+    font-weight: bold;
+}
+
+.alert {
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    width: auto;
+    margin-right: 10px;
+}
+
+.remove-button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

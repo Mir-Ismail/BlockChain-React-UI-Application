@@ -1,0 +1,24 @@
+/* themes.css */
+
+body.light {
+  --background-color: #ffffff;
+  --first-color: #000000;
+  --navbar-color: #f8f9fa;
+  --text-color: #000000;
+}
+
+body.dark {
+  --background-color: #343a40;
+  --text-color: #ffffff;
+  --navbar-color: #212529;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: #212529;
+  color: white !important;
+}

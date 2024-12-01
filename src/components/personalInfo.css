@@ -1,0 +1,48 @@
+.personal-info {
+    background-color: #f4f6f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.personal-info:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.personal-info .row {
+    margin-bottom: 20px;
+}
+
+.personal-info label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+.personal-info .form-control,
+.personal-info .form-select {
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.personal-info .form-control:focus,
+.personal-info .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+.personal-info .form-check-input:focus {
+    border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .personal-info .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
