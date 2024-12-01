@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  clientId        String  @id @default(uuid())
+  org             String
+  userId          String  @unique
+  cnic            String  @unique
+  affiliation     String
+  attributes      Json
+  user_password   String
+  user_name       String
+}
+
+model InsuranceBuyer {
+  id                          Int     @id @default(autoincrement())
+  first_name                  String
+  last_name                   String
+  street_address              String
+  city                        String
+  country                     String
+  gender                      String
+  date_of_birth               DateTime
+  marital_status              String
+  phone_number                String
+  email                       String
+  emergency_contact_name       String
+  emergency_contact_phone      String
+  emergency_contact_relationship String
+  employment_status         String 
+  government_department     String @default("null")
+  government_designation    String @default("null")
+  company_name              String @default("null")
+  job_title                 String @default("null")
+  salary                    Float @default(0.0)
+  business_name             String @default("null")
+  business_type             String @default("null")
+  annual_income             Float @default(0.0)
+  business_registration_number String @default("null")
+  business_address          String @default("null")
+
+}
+
+model Hospital {
+  hospitalName           String
+  hospitalId             Int
+  streetAddress          String       // Street address of the hospital
+  hospitalCategory       String       // Category of the hospital (e.g., general, specialty)
+  city                   String       // City where the hospital is located
+  hospitalNumber         String       // Phone number of the hospital
+  hospitalEmail          String       // Email address of the hospital
+  officialWebsite        String       // Official website of the hospital
+  licenseNumber          String       // License number issued to the hospital
+  hospitalType           String       // Type of the hospital (e.g., private, public)
+  specialization         String       // Medical specializations offered by the hospital
+  licenseDocuments       String       // Path or reference to license documents
+  accountOwnerName       String       // Name of the account owner for financial matters
+  accountNumber          String       // Bank account number for transactions
+  coordinates            String       // Latitude and longitude
+  branchCode             String       // Branch code for the bank account
+  taxInformation         String       // Tax-related information (e.g., Tax ID, VAT number)
+  adminUserId            String       // Unique identifier for the admin user managing the hospital's account
+  adminName              String       // Name of the admin user
+  adminPhoneNumber       String       // Phone number of the admin user
+  adminEmail             String       // Email address of the admin user
+  createdAt              DateTime     // Timestamp when the hospital was added to the system
+  updatedAt              DateTime     // Timestamp when the hospital information was last updated
+  isActive               Boolean      // Status indicating if the hospital is currently active or inactive
+}
